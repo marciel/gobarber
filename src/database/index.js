@@ -24,7 +24,7 @@ class Database{
     //Base de dados vai ser criada automaticamente com o nome gobarber pelo mongo
     //Se tiver senha a base de dados, informa também, neste caso foi criada a instância/imagem sem senha
     this.mongoConnection = mongoose.connect(
-      'mongodb://localhost:27017/gobarber',
+      process.env.MONGO_URL,
       {
         useNewUrlParser: true,
         useFindAndModify: true,
